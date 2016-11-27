@@ -81,18 +81,6 @@ int main(int argc, char* argv[]){
 	matriz_C[i] = (int*) malloc(bc*sizeof(int));
   }
 
-  /*for(i=0;i<af;i++){
-      for(j=0;j<ac;j++){
-          matriz_A[i][j]=1;
-      }
-  }
-  printf("\n\n");
-  for(i=0;i<bf;i++){
-      for(j=0;j<bc;j++){
-          matriz_B[i][j]=1;
-      }
-  }*/
-
   pthread_t* hilos;
   hilos = malloc (thread_count*sizeof(pthread_t));
   astart=times(&t1);
@@ -111,12 +99,6 @@ int main(int argc, char* argv[]){
   printf ("salida(times())=%ld\n", (long)(aend-astart));
   printf("La funcion clock() da:%lf\n",((double)(end-start)/CLOCKS_PER_SEC));
   printf ("La función get_time:%lf segundos\n",(end_get-start_get));
-
- /*for(i=0;i<af;i++){
-      for(j=0;j<bc;j++){
-          printf("%d",matriz_C[i][j]);
-      }
-  }*/
 
 return 0;
 
